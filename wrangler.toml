@@ -1,0 +1,17 @@
+"$schema" = "./node_modules/wrangler/config-schema.json"
+name = "many-tools"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-04-24"
+
+[vars]
+APP_NAME = "ManyTools"
+APP_URL = "https://many-tools.pages.dev"
+
+[[kv_namespaces]]
+binding = "TEXT_SHARE_KV"
+id = "local_dev_only"
+
+[[d1_databases]]
+binding = "STATS_DB"
+database_name = "many_tools_stats"
+database_id = "local_dev_only"
