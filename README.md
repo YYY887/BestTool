@@ -1,5 +1,7 @@
 # BestTool
 
+[![Deploy to Cloudflare Pages](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/YYY887/BestTool)
+
 BestTool 是一个现代化的多功能在线工具箱，包含诸多便捷工具如：
 - 抖音无水印解析
 - JSON 格式化工具
