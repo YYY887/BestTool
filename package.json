@@ -8,7 +8,7 @@
     "build": "vite build",
     "build:watch": "vite build --watch",
     "preview": "vite preview",
-    "deploy": "npm run build && wrangler pages deploy dist"
+    "deploy": "true"
   },
   "dependencies": {
     "curlconverter": "^4.12.0",
