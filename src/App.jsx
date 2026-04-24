@@ -10,6 +10,8 @@ import ToolCard from "./components/ToolCard";
 import SearchInput from "./components/SearchInput";
 import Loader from "./components/Loader";
 import StatsPage from "./components/StatsPage";
+import HtmlHosting from "./components/HtmlHosting";
+import { FileCode } from "lucide-react";
 
 // 创建主题上下文
 const ThemeContext = createContext();
@@ -136,6 +138,7 @@ function App() {
                 <Route path="/curl" element={<CurlPage />} />
                 <Route path="/share" element={<SharePage />} />
                 <Route path="/tempmail" element={<TempMailPage />} />
+                <Route path="/html-host" element={<HtmlHostingPage />} />
                 <Route path="/stats" element={<StatsPage darkMode={darkMode} />} />
               </Routes>
             </PageTransitionWrapper>
@@ -210,7 +213,13 @@ function HomePage() {
       description: "一键生成随机邮箱保护隐私",
       path: "/tempmail"
     },
-    // 下面可以继续添加更多工具占位
+    {
+      id: "html",
+      icon: <FileCode className="w-8 h-8 text-blue-500" />,
+      title: "临时网页托管",
+      description: "一键生成直接渲染的 HTML 链接 (2天后毁)",
+      path: "/html-host"
+    }
   ];
 
   const filteredTools = tools.filter(
@@ -334,6 +343,20 @@ function TempMailPage() {
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`rounded-3xl ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
           <TempMail darkMode={darkMode} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function HtmlHostingPage() {
+  const { darkMode } = useTheme();
+
+  return (
+    <div className="w-full py-8 md:py-12 flex-1">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className={`rounded-3xl ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
+          <HtmlHosting darkMode={darkMode} />
         </div>
       </div>
     </div>

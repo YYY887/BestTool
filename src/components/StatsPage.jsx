@@ -7,6 +7,7 @@ const toolNames = {
   curl: "cURL 代码转换",
   share: "文本在线传递",
   tempmail: "临时隐私邮箱",
+  html: "临时网页托管",
   app_visits: "全站总访问数"
 };
 

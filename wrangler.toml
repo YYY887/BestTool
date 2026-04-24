@@ -11,6 +11,10 @@ APP_URL = "https://many-tools.pages.dev"
 binding = "TEXT_SHARE_KV"
 id = "local_dev_only"
 
+[[kv_namespaces]]
+binding = "HTML_HOSTING_KV"
+id = "local_dev_only_html"
+
 [[d1_databases]]
 binding = "STATS_DB"
 database_name = "many_tools_stats"
